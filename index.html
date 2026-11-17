@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,148 +7,149 @@
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
 <style>
-:root { --ochre: #d4a12a; --ochre-wash: #f3e2b3; --olive: #7d7a3a; --olive-wash: #ebe7c9; --sepia: #7a4f12;
-  --ink: #3b2f1c; --muted: #6f6450; --line: #e4d6b5; --paper: #f4ecd8; --card: #fbf6ea; }
+:root { --accent: #111; --accent-wash: #eeeeee; --accent-deep: #111; --sky: #ffffff;
+  --ink: #111; --muted: #666; --line: #d6d6d6; --paper: #ffffff; --card: #ffffff; }
 body { font-family: -apple-system, "Helvetica Neue", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
   font-weight: 300; line-height: 1.45; max-width: 1024px; margin: 24px auto; padding: 0 16px; color: var(--ink); background: var(--paper); }
 b, strong { font-weight: 500; }
-h1 { font-weight: 300; font-size: 2.3em; letter-spacing: 0.01em; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 4px solid var(--ochre); display: inline-block; }
-header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
-.logo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 6px rgba(59,47,28,.2); }
+h1 { font-weight: 300; font-size: 2.3em; letter-spacing: 0.01em; margin: 0 0 8px; display: inline-block; }
+header { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 8px; text-align: center; }
+.logo { width: 128px; height: 128px; }
 header h1 { margin: 0; }
 p.intro { font-size: 1.1em; margin: 8px 0 20px; }
-h2 { font-weight: 400; font-size: 1.15em; color: var(--sepia); margin: 32px 0 10px; }
+h2 { font-weight: 400; font-size: 1.15em; color: var(--accent-deep); margin: 32px 0 10px; }
 .yr { font-size: 0.75em; font-weight: 300; color: var(--muted); margin-left: 4px; }
-a { color: var(--sepia); text-decoration: none; border-bottom: 1px solid rgba(212,161,42,.6); }
-a:hover { border-bottom-color: var(--sepia); }
-.week { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 4px 12px;
-  box-shadow: 0 1px 2px rgba(59,47,28,.05), 0 6px 16px rgba(59,47,28,.07); }
+a { color: var(--accent-deep); text-decoration: none; border-bottom: 1px solid var(--accent); }
+a:hover { border-bottom-color: var(--accent-deep); }
+.week { background: var(--card); border: 1px solid var(--line); padding: 4px 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 6px 16px rgba(0,0,0,.07); }
 .dayblock { padding: 10px 0; border-bottom: 1px solid var(--line); }
 .dayblock:last-child { border-bottom: none; }
-.day { font-weight: 400; border-bottom: 2px solid var(--ochre); margin-bottom: 8px; padding-bottom: 4px; }
-.ev { margin-bottom: 8px; padding: 8px; background: #fffdf6; border: 1px solid var(--line); border-left: 4px solid var(--ochre);
-  border-radius: 5px; box-shadow: 0 1px 3px rgba(59,47,28,.08); }
-.ev b { color: var(--sepia); }
-.title { background: var(--ochre-wash); border-radius: 3px; padding: 3px 6px; margin: 4px 0; }
+.day { font-weight: 400; border-bottom: 2px solid var(--accent); margin-bottom: 8px; padding-bottom: 4px; }
+.ev { margin-bottom: 8px; padding: 8px; background: var(--sky); border: 1px solid var(--line);
+  box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.ev b { color: var(--accent-deep); }
+.title { background: var(--accent-wash); padding: 3px 6px; margin: 4px 0; }
 .none { color: var(--muted); margin: 10px 0; }
 .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-.tag { font-size: 0.78em; color: #55531f; background: var(--olive-wash); border: 1px solid rgba(125,122,58,.45);
-  border-radius: 999px; padding: 1px 8px; white-space: nowrap; }
+.tag { font-size: 0.78em; color: var(--accent-deep); background: var(--card); border: 1px solid var(--accent);
+  padding: 1px 8px; white-space: nowrap; }
 small { color: var(--muted); }
+.cal { margin-top: 32px; }
 .dot { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: #4ca1ff; margin-left: 5px; vertical-align: middle; }
 </style>
 </head>
 <body>
-<header><img class="logo" src="logo.png" alt="" width="64" height="64"><h1>Draw In Taipei</h1></header>
-<p class="intro">Life drawing sessions in Taipei, gathered in one place. 台北的人體速寫活動，整理在同一個地方。</p>
-<p>Missing an event? 漏掉了活動嗎？Contact us 請聯絡我們：<a href="https://www.instagram.com/drawintaipei/">@drawintaipei</a> (Instagram)</p>
-<p>Subscribe to calendar 訂閱行事曆：<a href="events.ics">events.ics</a></p>
-<h2>Week 16th of November to 22nd of November / 11月16日 至 11月22日 <span class="yr">2026</span></h2>
+<header><img class="logo" src="logo.png" alt="" width="128" height="128"><h1>Draw In Taipei</h1></header>
+<p class="intro">台北的人體速寫活動，整理在同一個地方。Life drawing sessions in Taipei, gathered in one place.</p>
+<p>漏掉了活動嗎？請聯絡我們 Missing an event? Contact us: <a href="https://www.instagram.com/drawintaipei/">@drawintaipei</a> (Instagram)</p>
+<h2>11月16日 至 11月22日 / Week 16th of November to 22nd of November <span class="yr">2026</span></h2>
 <div class="week">
-<div class="dayblock"><div class="day">Wednesday 11/18 星期三</div>
+<div class="dayblock"><div class="day">11/18 星期三 Wednesday</div>
 <div class="ev">
-<div class="top"><b>19:00–22:00</b><span><span class="tag">Taipei 台北</span></span></div>
-<div class="title">Just The Way You Art — Long Pose Figure Drawing &amp; Painting / Just The Way You Art — 長姿勢人體繪畫</div>
+<div class="top"><b>19:00–22:00</b><span><span class="tag">台北 Taipei</span></span></div>
+<div class="title">Just The Way You Art — 長姿勢人體繪畫 / Just The Way You Art — Long Pose Figure Drawing &amp; Painting</div>
 <small>Bench Time Studio</small><br><a href="https://www.instagram.com/p/Dey94jmN-Wp/">Instagram post</a> <small>(benchtime_studio)</small>
 </div>
 <div class="ev">
-<div class="top"><b>19:00–21:00</b><span><span class="tag">Taipei 台北</span><span class="dot"></span></span></div>
-<div class="title">Desire-themed Life Drawing — 《思惏壇》 (Greed), with Popo / 人體慾望速寫主題系列 — 《思惏壇》 Popo</div>
+<div class="top"><b>19:00–21:00</b><span><span class="tag">台北 Taipei</span><span class="dot"></span></span></div>
+<div class="title">人體慾望速寫主題系列 — 《思惏壇》 Popo / Desire-themed Life Drawing — 《思惏壇》 (Greed), with Popo</div>
 <small>叢口</small><br><a href="https://www.instagram.com/p/Dfzzd_LkozK/">Instagram post</a> <small>(chen.guan.hua)</small>
 </div></div>
-<div class="dayblock"><div class="day">Saturday 11/21 星期六</div>
+<div class="dayblock"><div class="day">11/21 星期六 Saturday</div>
 <div class="ev">
-<div class="top"><b>14:00–17:00</b><span><span class="tag">Keelung 基隆</span><span class="dot"></span></span></div>
-<div class="title">The Blue — Themed Life Drawing / 藍色 — 主題人體速寫</div>
+<div class="top"><b>14:00–17:00</b><span><span class="tag">基隆 Keelung</span><span class="dot"></span></span></div>
+<div class="title">藍色 — 主題人體速寫 / The Blue — Themed Life Drawing</div>
 <small>勻所</small><br><a href="https://www.instagram.com/p/DfCmIYaycXt/">Instagram post</a> <small>(yun.soul_studio)</small>
 </div>
 <div class="ev">
-<div class="top"><b>14:00–17:00</b><span><span class="tag">Taipei 台北</span></span></div>
-<div class="title">Figure Drawing × Floral Art / 花藝人體速寫</div>
+<div class="top"><b>14:00–17:00</b><span><span class="tag">台北 Taipei</span></span></div>
+<div class="title">花藝人體速寫 / Figure Drawing × Floral Art</div>
 <small>Bench Time Studio</small><br><a href="https://www.instagram.com/p/DfkPfVaPsPF/">Instagram post</a> <small>(benchtime_studio)</small>
 </div></div>
-<div class="dayblock"><div class="day">Sunday 11/22 星期日</div>
+<div class="dayblock"><div class="day">11/22 星期日 Sunday</div>
 <div class="ev">
-<div class="top"><b>10:30–13:00</b><span><span class="tag">Taipei 台北</span></span></div>
-<div class="title">Life Drawing at ENKA Library — Shanghai Bund / 櫞椛文庫 圖書館的人體速寫 — 上海灘</div>
+<div class="top"><b>10:30–13:00</b><span><span class="tag">台北 Taipei</span></span></div>
+<div class="title">櫞椛文庫 圖書館的人體速寫 — 上海灘 / Life Drawing at ENKA Library — Shanghai Bund</div>
 <small>櫞椛文庫</small><br><a href="https://www.instagram.com/p/Df132OGp4Ax/">Instagram post</a> <small>(artmodeltw)</small>
 </div></div>
 </div>
-<h2>Week 23rd of November to 29th of November / 11月23日 至 11月29日 <span class="yr">2026</span></h2>
+<h2>11月23日 至 11月29日 / Week 23rd of November to 29th of November <span class="yr">2026</span></h2>
 <div class="week">
-<div class="dayblock"><div class="day">Monday 11/23 星期一</div>
+<div class="dayblock"><div class="day">11/23 星期一 Monday</div>
 <div class="ev">
-<div class="top"><b>20:30–23:30</b><span><span class="tag">Taipei 台北</span></span></div>
-<div class="title">Monday Drawing Party — Male Model / 週一繪畫派對 — 男模專場</div>
+<div class="top"><b>20:30–23:30</b><span><span class="tag">台北 Taipei</span></span></div>
+<div class="title">週一繪畫派對 — 男模專場 / Monday Drawing Party — Male Model</div>
 <small>左輪手槍 Revolver</small><br><a href="https://www.instagram.com/p/DfKOPBZSyFp/">Instagram post</a> <small>(twlifemodel_renhsin)</small>
 </div></div>
-<div class="dayblock"><div class="day">Wednesday 11/25 星期三</div>
+<div class="dayblock"><div class="day">11/25 星期三 Wednesday</div>
 <div class="ev">
-<div class="top"><b>19:00–22:00</b><span><span class="tag">Taipei 台北</span><span class="dot"></span></span></div>
-<div class="title">Long Pose · Nude Oil Painting / 人體油畫長姿勢</div>
+<div class="top"><b>19:00–22:00</b><span><span class="tag">台北 Taipei</span><span class="dot"></span></span></div>
+<div class="title">人體油畫長姿勢 / Long Pose · Nude Oil Painting</div>
 <small>Bench Time Studio</small><br><a href="https://www.instagram.com/benchtime_studio/">Instagram account</a> <small>(benchtime_studio)</small>
 </div></div>
-<div class="dayblock"><div class="day">Thursday 11/26 星期四</div>
+<div class="dayblock"><div class="day">11/26 星期四 Thursday</div>
 <div class="ev">
-<div class="top"><b>20:00</b><span><span class="tag">Taipei 台北</span><span class="dot"></span></span></div>
-<div class="title">Practice of Life Drawing — Soliloquy of a Body / 人體速繪所 — 獨身獨語</div>
+<div class="top"><b>20:00</b><span><span class="tag">台北 Taipei</span><span class="dot"></span></span></div>
+<div class="title">人體速繪所 — 獨身獨語 / Practice of Life Drawing — Soliloquy of a Body</div>
 <small>Zero Gravity</small><br><a href="https://www.instagram.com/p/DfUqu2XE5TD/">Instagram post</a> <small>(zerogravitytaipei)</small>
 </div></div>
-<div class="dayblock"><div class="day">Sunday 11/29 星期日</div>
+<div class="dayblock"><div class="day">11/29 星期日 Sunday</div>
 <div class="ev">
-<div class="top"><b>14:00–16:00</b><span><span class="tag">Taipei 台北</span></span></div>
-<div class="title">Pen Club Life Drawing / Pen Club 隨意畫聚 — 人體寫生</div>
+<div class="top"><b>14:00–16:00</b><span><span class="tag">台北 Taipei</span></span></div>
+<div class="title">Pen Club 隨意畫聚 — 人體寫生 / Pen Club Life Drawing</div>
 <small>破曉咖啡 DayBreak</small><br><a href="https://www.instagram.com/p/DfWSB8zGWxb/">Instagram post</a> <small>(newbloommag)</small>
 </div>
 <div class="ev">
-<div class="top"><b>19:00–22:00</b><span><span class="tag">Taipei 台北</span></span></div>
-<div class="title">Sunday Life Drawing / 週日人體速寫</div>
-<small>Another Brick</small><br><a href="https://line.me/ti/g/xdy7mrJK9B">Join LINE group 加入 LINE 群組</a> <small>(Sunday Life Drawing @ Another Brick)</small>
+<div class="top"><b>19:00–22:00</b><span><span class="tag">台北 Taipei</span></span></div>
+<div class="title">週日人體速寫 / Sunday Life Drawing</div>
+<small>Another Brick</small><br><a href="https://line.me/ti/g/xdy7mrJK9B">加入 LINE 群組 Join LINE group</a> <small>(Sunday Life Drawing @ Another Brick)</small>
 </div>
 <div class="ev">
-<div class="top"><b>Time TBA 時間未定</b><span><span class="tag">Taipei 台北</span></span></div>
-<div class="title">Inking Daily (日日著墨) Sketch Session / 日日著墨 速寫場</div>
-<small>Location TBA / 地點未定</small><br><a href="https://www.instagram.com/p/DfXOjAhic6l/">Instagram post</a> <small>(inking.morikux)</small>
+<div class="top"><b>時間未定 Time TBA</b><span><span class="tag">台北 Taipei</span></span></div>
+<div class="title">日日著墨 速寫場 / Inking Daily (日日著墨) Sketch Session</div>
+<small>地點未定 Location TBA</small><br><a href="https://www.instagram.com/p/DfXOjAhic6l/">Instagram post</a> <small>(inking.morikux)</small>
 </div></div>
 </div>
-<h2>Week 30th of November to 6th of December / 11月30日 至 12月6日 <span class="yr">2026</span></h2>
+<h2>11月30日 至 12月6日 / Week 30th of November to 6th of December <span class="yr">2026</span></h2>
 <div class="week">
-<div class="dayblock"><div class="day">Monday 11/30 星期一</div>
+<div class="dayblock"><div class="day">11/30 星期一 Monday</div>
 <div class="ev">
-<div class="top"><b>19:30–21:30</b><span><span class="tag">Taipei 台北</span></span></div>
-<div class="title">Figure Drawing ft. 張儷 — Eve | The First Woman / 人體速寫 ft. 張儷 — 夏娃｜第一個女人</div>
-<small>Location TBA / 地點未定</small><br><a href="https://www.instagram.com/p/DfJYqPin0Dn/">Instagram post</a> <small>(thesuspendedcanvas)</small>
+<div class="top"><b>19:30–21:30</b><span><span class="tag">台北 Taipei</span></span></div>
+<div class="title">人體速寫 ft. 張儷 — 夏娃｜第一個女人 / Figure Drawing ft. 張儷 — Eve | The First Woman</div>
+<small>地點未定 Location TBA</small><br><a href="https://www.instagram.com/p/DfJYqPin0Dn/">Instagram post</a> <small>(thesuspendedcanvas)</small>
 </div></div>
 </div>
-<h2>Week 7th of December to 13th of December / 12月7日 至 12月13日 <span class="yr">2026</span></h2>
+<h2>12月7日 至 12月13日 / Week 7th of December to 13th of December <span class="yr">2026</span></h2>
 <div class="week">
-<div class="dayblock"><div class="day">Saturday 12/12 星期六</div>
+<div class="dayblock"><div class="day">12/12 星期六 Saturday</div>
 <div class="ev">
-<div class="top"><b>14:00–16:00</b><span><span class="tag">Taipei 台北</span></span></div>
-<div class="title">Naran Figure Drawing / 納苒人體藝術素描</div>
+<div class="top"><b>14:00–16:00</b><span><span class="tag">台北 Taipei</span></span></div>
+<div class="title">納苒人體藝術素描 / Naran Figure Drawing</div>
 <small>納苒藝術工作坊</small><br><a href="https://www.instagram.com/p/Df1c0I6AIaw/">Instagram post</a> <small>(maison_naran)</small>
 </div></div>
-<div class="dayblock"><div class="day">Sunday 12/13 星期日</div>
+<div class="dayblock"><div class="day">12/13 星期日 Sunday</div>
 <div class="ev">
-<div class="top"><b>14:00–17:00</b><span><span class="tag">Taipei 台北</span><span class="dot"></span></span></div>
-<div class="title">Weekend Nude Drawing Class / 週末晚上的裸體素描課</div>
+<div class="top"><b>14:00–17:00</b><span><span class="tag">台北 Taipei</span><span class="dot"></span></span></div>
+<div class="title">週末晚上的裸體素描課 / Weekend Nude Drawing Class</div>
 <small>boven雜誌圖書館</small><br><a href="https://www.instagram.com/p/DezFziFjxr1/">Instagram post</a> <small>(saalartlab)</small>
 </div></div>
 </div>
-<h2>Week 14th of December to 20th of December / 12月14日 至 12月20日 <span class="yr">2026</span></h2>
+<h2>12月14日 至 12月20日 / Week 14th of December to 20th of December <span class="yr">2026</span></h2>
 <div class="week">
-<div class="dayblock"><div class="day">Monday 12/14 星期一</div>
+<div class="dayblock"><div class="day">12/14 星期一 Monday</div>
 <div class="ev">
-<div class="top"><b>19:00–21:00</b><span><span class="tag">New Taipei 新北</span><span class="dot"></span></span></div>
-<div class="title">Ren Hsin Drink &amp; Draw — Female Model / 人形畫聚 Drink &amp; Draw — 女模專場</div>
+<div class="top"><b>19:00–21:00</b><span><span class="tag">新北 New Taipei</span><span class="dot"></span></span></div>
+<div class="title">人形畫聚 Drink &amp; Draw — 女模專場 / Ren Hsin Drink &amp; Draw — Female Model</div>
 <small>我們不要傷心了</small><br><a href="https://www.instagram.com/p/Df17UsKSGAy/">Instagram post</a> <small>(twlifemodel_renhsin)</small>
 </div></div>
-<div class="dayblock"><div class="day">Saturday 12/19 星期六</div>
+<div class="dayblock"><div class="day">12/19 星期六 Saturday</div>
 <div class="ev">
-<div class="top"><b>14:00–16:30</b><span><span class="tag">Keelung 基隆</span></span></div>
-<div class="title">No Proper Way to Stand, No Proper Way to Sit — Themed Life Drawing / 站沒站相，坐沒坐相 主題式人體速寫</div>
+<div class="top"><b>14:00–16:30</b><span><span class="tag">基隆 Keelung</span></span></div>
+<div class="title">站沒站相，坐沒坐相 主題式人體速寫 / No Proper Way to Stand, No Proper Way to Sit — Themed Life Drawing</div>
 <small>勻所</small><br><a href="https://www.instagram.com/yun.soul_studio/">Instagram account</a> <small>(yun.soul_studio)</small>
 </div></div>
 </div>
+<p class="cal">訂閱行事曆 Subscribe to calendar: <a href="events.ics">events.ics</a></p>
 </body>
 </html>
