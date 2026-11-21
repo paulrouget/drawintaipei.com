@@ -6,54 +6,50 @@
 <title>Draw In Taipei</title>
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600&family=Noto+Sans+TC:wght@400;600&family=Noto+Serif+TC:wght@600&display=swap">
 <style>
-:root { --accent: #c9ae6f; --accent-wash: #f1e9d3; --accent-deep: #6f5b34; --sky: #ffffff;
-  --ink: #3a3326; --muted: #6f6857; --line: #e3dac4; --paper: #fbf8f1; --card: #fbf9f3; }
-body { font-family: -apple-system, "Helvetica Neue", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-  font-weight: 300; line-height: 1.45; max-width: 1024px; margin: 24px auto; padding: 0 16px; color: var(--ink); background: var(--paper); }
-b, strong { font-weight: 500; }
-h1 { font-weight: 300; font-size: 2.3em; letter-spacing: 0.01em; margin: 0 0 8px; display: inline-block; }
-header { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 8px; text-align: center; }
-.logo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 6px rgba(58,51,38,.2); }
-header h1 { margin: 0; }
-p.intro { font-size: 1.1em; margin: 8px 0 20px; }
-h2 { font-weight: 400; font-size: 1.15em; color: var(--accent-deep); margin: 32px 0 10px; }
-.yr { font-size: 0.75em; font-weight: 300; color: var(--muted); margin-left: 4px; }
-a { color: var(--accent-deep); text-decoration: none; border-bottom: 1px solid var(--accent); }
-a:hover { border-bottom-color: var(--accent-deep); }
-.week { }
-.dayblock { padding: 10px 0; border-bottom: 1px solid var(--line); }
-.dayblock:last-child { border-bottom: none; }
-.day { font-weight: 400; background: #8a6a2c; color: #fff; margin-bottom: 8px; padding: 4px 8px; }
-.ev { margin-bottom: 8px; padding: 8px; background: var(--sky); border: 1px solid var(--line);
-  border-radius: 5px; box-shadow: 0 1px 3px rgba(58,51,38,.08); }
-.time { font-weight: 300; font-size: 0.875em; color: var(--muted); }
-.title { background: var(--accent-wash); border-radius: 4px 4px 0 0; padding: 6px 8px; margin: -8px -8px 8px; }
-.none { color: var(--muted); margin: 10px 0; }
-.top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-small { color: var(--muted); }
+:root { --paper: #fafaf8; --ink: #1c1c1a; --quiet: #55554f; --rule: #dcdcd6; --divider: #c6c6c1; --link: #1d4ed8; color-scheme: light; }
+* { box-sizing: border-box; margin: 0; }
+body { background: var(--paper); color: var(--ink);
+  font: 400 1rem/1.6 "Public Sans", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; }
+a { color: var(--link); text-underline-offset: .15em; }
+h1, h2, .title { font-family: "Source Serif 4", "Noto Serif TC", "Songti TC", serif; font-weight: 600; }
+.page { max-width: 72rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+.logo { width: 5rem; height: 5rem; object-fit: cover; display: block; margin-bottom: 1.25rem; }
+header h1 { font-size: 2.75rem; line-height: 1; letter-spacing: -.01em; }
+.intro { margin-top: 1.25rem; font-size: 1.05rem; }
+.intro p + p { margin-top: .75rem; }
+h2 { font-size: 1.2rem; line-height: 1.25; border-top: 1px solid var(--divider); padding-top: 1.25rem; margin-top: 2.5rem; }
+.yr { font: 400 .95rem "Public Sans", sans-serif; color: var(--quiet); margin-left: .25rem; }
+.day { font-weight: 600; font-size: .95rem; color: var(--quiet); margin-top: 1.5rem; }
+.ev { padding: .75rem 0; border-bottom: 1px solid var(--rule); font-size: .9rem; line-height: 1.5; color: var(--quiet); }
+.dayblock .ev:last-child { border-bottom: none; padding-bottom: 0; }
+.title { font-size: 1.1rem; line-height: 1.3; color: var(--ink); margin-bottom: .2rem; }
 .title::after { content: ""; display: block; clear: both; }
-.av { float: right; width: 36px; height: 36px; border-radius: 50%; object-fit: cover; margin: 0 0 4px 8px; border: 1px solid var(--line); background: #fff; }
-.dot { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: #4ca1ff; margin-left: 5px; vertical-align: middle; }
+.av { float: right; width: 36px; height: 36px; border-radius: 50%; object-fit: cover; margin: 0 0 4px 12px; border: 1px solid var(--rule); background: #fff; }
+.time { font-weight: 600; color: var(--ink); }
+small { font-size: inherit; }
+.none { color: var(--quiet); margin-top: 1rem; }
+.dot { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: #4ca1ff; margin-left: 6px; vertical-align: middle; }
+@media (min-width: 60rem) {
+  .page { display: grid; grid-template-columns: 18rem minmax(0, 1fr); gap: 0 3.5rem; padding: 2.5rem 2rem 4rem; }
+  header { position: sticky; top: 2.5rem; align-self: start; }
+  .logo { width: 100%; height: auto; aspect-ratio: 1; }
+  main > h2:first-child { margin-top: 0; }
+  h2 { font-size: 1.4rem; }
+  .week { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; }
+}
 </style>
 </head>
-<body>
-<header><img class="logo" src="logo.png" alt="" width="64" height="64"><h1>Draw In Taipei</h1></header>
-<p class="intro">台北的人體速寫活動，整理在同一個地方。Life drawing sessions in Taipei, gathered in one place.</p>
-<p>漏掉了活動嗎？請聯絡我們 Missing an event? Contact us: <a href="https://www.instagram.com/drawintaipei/">@drawintaipei</a> (Instagram)</p>
+<body><div class="page">
+<header><img class="logo" src="logo.png" alt="" width="320" height="320"><h1>Draw In Taipei</h1>
+<div class="intro"><p>台北的人體速寫活動，整理在同一個地方。Life drawing sessions in Taipei, gathered in one place.</p>
+<p>漏掉了活動嗎？請聯絡我們 Missing an event? Contact us: <a href="https://www.instagram.com/drawintaipei/">@drawintaipei</a> (Instagram)</p></div></header>
+<main>
 <h2>11月16日 至 11月22日 / Week Nov 16–22 <span class="yr">2026</span></h2>
 <div class="week">
-<div class="dayblock"><div class="day">2026-11-21 星期六 Saturday</div>
-<div class="ev">
-<div class="title"><img class="av" src="avatars/yun.soul_studio.jpg" alt="" width="36" height="36">藍色 — 主題人體速寫 / The Blue — Themed Life Drawing</div>
-<div class="top"><b class="time">14:00–17:00</b><span class="dot"></span></div>
-<small>勻所 (基隆 Keelung)</small><br><a href="https://www.instagram.com/p/DfCmIYaycXt/">Instagram post</a> <small>(yun.soul_studio)</small>
-</div>
-<div class="ev">
-<div class="title"><img class="av" src="avatars/benchtime_studio.jpg" alt="" width="36" height="36">花藝人體速寫 / Figure Drawing × Floral Art</div>
-<div class="top"><b class="time">14:00–17:00</b></div>
-<small>Bench Time Studio (台北 Taipei)</small><br><a href="https://www.instagram.com/p/DfkPfVaPsPF/">Instagram post</a> <small>(benchtime_studio)</small>
-</div></div>
 <div class="dayblock"><div class="day">2026-11-22 星期日 Sunday</div>
 <div class="ev">
 <div class="title"><img class="av" src="avatars/artmodeltw.jpg" alt="" width="36" height="36">櫞椛文庫 圖書館的人體速寫 — 上海灘 / Life Drawing at ENKA Library — Shanghai Bund</div>
@@ -155,5 +151,6 @@ small { color: var(--muted); }
 <small>勻所 (基隆 Keelung)</small><br><a href="https://www.instagram.com/yun.soul_studio/">Instagram account</a> <small>(yun.soul_studio)</small>
 </div></div>
 </div>
-</body>
+</main>
+</div></body>
 </html>
